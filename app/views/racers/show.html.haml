@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Surname:
+  = @racer.surname
+%p
+  %b Firstname:
+  = @racer.firstname
+%p
+  %b Bday:
+  = @racer.bday
+%p
+  %b Country:
+  = @racer.country
+%p
+  %b Number of wins:
+  = @racer.number_of_wins
+
+= link_to 'Редактировать', edit_racer_path(@racer)
+\|
+= link_to 'Назад', racers_path

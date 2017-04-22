@@ -1,0 +1,29 @@
+%h1 Список гонщиков
+
+%table
+  %thead
+    %tr
+      %th Фамилия
+      %th Имя
+      %th Дата рождения
+      %th Страна
+      %th Количество побед
+      %th
+      %th
+      %th
+
+  %tbody
+    - @racers.each do |racer|
+      %tr
+        %td= racer.surname
+        %td= racer.firstname
+        %td= racer.bday
+        %td= racer.country
+        %td= racer.number_of_wins
+        %td= link_to 'Показать', racer
+        %td= link_to 'Редактировать', edit_racer_path(racer)
+        %td= link_to 'Удалить', racer, :method => :delete, :data => { :confirm => 'Вы уверены?' }
+
+%br
+
+= link_to 'Новый гонщик', new_racer_path

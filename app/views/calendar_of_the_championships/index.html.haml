@@ -1,0 +1,29 @@
+%h1 Календарь чемпионата
+
+%table
+  %thead
+    %tr
+      %th Название гран-при
+      %th Номер среди других гран-при
+      %th Дата проведения
+      %th Страна проведения
+      %th Место проведения
+      %th
+      %th
+      %th
+
+  %tbody
+    - @calendar_of_the_championships.each do |calendar_of_the_championship|
+      %tr
+        %td= calendar_of_the_championship.gp_name
+        %td= calendar_of_the_championship.number
+        %td= calendar_of_the_championship.race_date
+        %td= calendar_of_the_championship.country
+        %td= calendar_of_the_championship.location
+        %td= link_to 'Показать', calendar_of_the_championship
+        %td= link_to 'Редактировать', edit_calendar_of_the_championship_path(calendar_of_the_championship)
+        %td= link_to 'Удалить запись', calendar_of_the_championship, :method => :delete, :data => { :confirm => 'Вы уверены?' }
+
+%br
+
+= link_to 'Новая запись в календаре чемпионата ', new_calendar_of_the_championship_path

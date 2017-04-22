@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Gp name:
+  = @calendar_of_the_championship.gp_name
+%p
+  %b Number:
+  = @calendar_of_the_championship.number
+%p
+  %b Race date:
+  = @calendar_of_the_championship.race_date
+%p
+  %b Country:
+  = @calendar_of_the_championship.country
+%p
+  %b Location:
+  = @calendar_of_the_championship.location
+
+= link_to 'Редактировать', edit_calendar_of_the_championship_path(@calendar_of_the_championship)
+\|
+= link_to 'Назад', calendar_of_the_championships_path

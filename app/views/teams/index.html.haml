@@ -1,0 +1,33 @@
+%h1 Команды
+
+%table
+  %thead
+    %tr
+      %th Название команды
+      %th Производитель мотора
+      %th Основной гонщик 1
+      %th Основной гонщик 2
+      %th Номер машины первого гонщика
+      %th Номер машины второго гонщика
+      %th Страна происхождения команды
+      %th
+      %th
+      %th
+
+  %tbody
+    - @teams.each do |team|
+      %tr
+        %td= team.team_name
+        %td= team.motor_manufacturer
+        %td= team.racer1_id
+        %td= team.racer2_id
+        %td= team.car_number1
+        %td= team.car_number2
+        %td= team.team_country
+        %td= link_to 'Show', team
+        %td= link_to 'Edit', edit_team_path(team)
+        %td= link_to 'Destroy', team, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Team', new_team_path

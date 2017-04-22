@@ -1,0 +1,31 @@
+= form_for @team do |f|
+  - if @team.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@team.errors.count, "")} неправильно заполненных полей:"
+      %ul
+        - @team.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :team_name, 'Название команды'
+    = f.text_field :team_name
+  .field
+    = f.label :motor_manufacturer, 'Производитель мотора'
+    = f.text_field :motor_manufacturer
+  .field
+    = f.label :racer1_id, 'Основной гонщик 1'
+    = f.text_field :racer1_id
+  .field
+    = f.label :racer2_id, 'Основной гонщик 2'
+    = f.text_field :racer2_id
+  .field
+    = f.label :car_number1, 'Номер машины первого гонщика'
+    = f.text_field :car_number1
+  .field
+    = f.label :car_number2, 'Номер машины второго гонщика'
+    = f.text_field :car_number2
+  .field
+    = f.label :team_country, 'Страна команды'
+    = f.text_field :team_country
+  .actions
+    = f.submit 'Сохранить'

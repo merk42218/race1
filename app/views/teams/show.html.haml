@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Team name:
+  = @team.team_name
+%p
+  %b Motor manufacturer:
+  = @team.motor_manufacturer
+%p
+  %b Racer:
+  = @team.racer1_id
+%p
+  %b Racer:
+  = @team.racer2_id
+%p
+  %b Car number1:
+  = @team.car_number1
+%p
+  %b Car number2:
+  = @team.car_number2
+%p
+  %b Team country:
+  = @team.team_country
+
+= link_to 'Редактировать', edit_team_path(@team)
+\|
+= link_to 'Назад', teams_path

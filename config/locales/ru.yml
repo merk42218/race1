@@ -1,0 +1,76 @@
+ru:
+  app:
+    name: Базовое приложение
+    company:
+      short_name: МПУ
+      department: Кафедра
+    users:
+      index: Список пользователей
+      new-button: Новый пользователь
+      edit: Редактирование пользователя
+      new: Создание пользователя
+    roles:
+      index: Список возможных ролей пользователей
+      new-button: Новая роль
+      edit: Редактирование роли
+      new: Создание роли
+  helpers:
+    submit:
+      create: Сохранить
+      submit: Сохранить
+      update: Сохранить
+    sure: Действительно удалить?
+
+  views:
+    pagination:
+      first: ⇤
+      last: ⇥
+      previous: ←
+      next: →
+      truncate: …
+  activerecord:
+    models:
+      user: Пользователь
+      racer: Список автогонщиков
+      team: Состав команд
+      calendar_of_the_championship: Календарь чемпионата
+    attributes:
+      racer:
+          surname: Фамилия
+          firstname: Имя
+          bday: Дата рождения
+          country: Страна
+          number_of_wins: Количество побед
+      team:
+          team_name: Название команды
+          motor_manufacturer: Производитель мотора
+          racer1_id: Основной гонщик
+          racer2_id: Основной гонщик
+          car_number1: Номер машины первого гонщика
+          car_number2: Номер машины второго гонщика
+          team_country: Страны происхождения команды
+      calendar_of_the_championship:
+          gp_name: Название гран-при
+          number: Номер среди других гран-при
+          race_date: Дата проведения
+          country: Страна проведения
+          location: Место проведения
+      user:
+        email: Пользовательское имя/электронная почта
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        reset_password_email_sent_at: Дата отправления письма для смены пароля
+        activation_state: Статус активации
+        activation_token_expires_at: Дата прекращения действия токена активации
+        last_login_at: Время последнего входа в систему
+        role_users: Роли
+      role:
+        name: Обозначение
+        info: Краткое название
+        full_info: Описание
+    errors:
+      models:
+        person:
+          attributes:
+            snils:
+              check_sum: имеет неправильную контрольную сумму
